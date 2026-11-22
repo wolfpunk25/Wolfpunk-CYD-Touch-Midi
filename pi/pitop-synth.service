@@ -1,0 +1,14 @@
+[Unit]
+Description=pi-top OLED MIDI synth controller
+After=pi-topd.service sound.target
+Requires=pi-topd.service
+Conflicts=pt-miniscreen.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/pitop-synth/pitop_synth.py
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

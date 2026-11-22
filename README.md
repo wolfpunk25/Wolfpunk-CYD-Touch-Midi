@@ -24,3 +24,8 @@ Arduino CLI, board `esp32:esp32:esp32`, libraries TFT_eSPI and XPT2046_Touchscre
 Program number = patch id number minus 1 (p1-p128 only). Re-run and re-flash after patches change.
 
 `lfo_mode.h` and `xy_pad_mode.h` are retired modes kept for reference; they are not compiled in.
+
+## Pi synth (`pi/`)
+Backup of the Raspberry Pi synth that WOLFPUNK controls over Bluetooth MIDI:
+`pitop_synth.py` (installs to `/opt/pitop-synth/`), `pitop-synth.service` (systemd unit), and `patches.json`
+(patch library, installs to `/var/lib/pitop-synth/`). Program Change `n` selects patch `p(n+1)`.
